@@ -55,10 +55,15 @@ Then open http://localhost:8940. (`.claude/launch.json` is configured for this.)
 Hosted on **GitHub Pages**, served straight from `main` at the repository root.
 Every push to `main` republishes automatically — there is no build step.
 
-Two files support this and should not be deleted:
+Three files support this and should not be deleted:
 
 - `CNAME` — holds `midnightshift.sg`; GitHub reads it to bind the custom domain
 - `.nojekyll` — skips Jekyll processing so files are served verbatim
+- `google0f55c35ab4f8965c.html` — Google Search Console ownership proof;
+  Google re-checks it periodically, so it has to stay reachable at the root
+
+Live at **https://midnightshift.sg** with Enforce HTTPS on. The certificate
+covers both the apex and `www` and renews automatically.
 
 ### DNS (at GoDaddy)
 
