@@ -52,9 +52,32 @@ Then open http://localhost:8940. (`.claude/launch.json` is configured for this.)
 
 ## Deploy
 
-Any static host works — Vercel, Netlify, Cloudflare Pages, or plain object
-storage + CDN. No build command; publish the repository root. Point
-`midnightshift.sg` at the host and you're live.
+Hosted on **GitHub Pages**, served straight from `main` at the repository root.
+Every push to `main` republishes automatically — there is no build step.
+
+Two files support this and should not be deleted:
+
+- `CNAME` — holds `midnightshift.sg`; GitHub reads it to bind the custom domain
+- `.nojekyll` — skips Jekyll processing so files are served verbatim
+
+### DNS (at GoDaddy)
+
+Apex `midnightshift.sg` → four `A` records:
+
+```
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+```
+
+Plus `www` → `CNAME` → `jeral-midnightstrategies.github.io`
+
+Once DNS resolves, turn on **Enforce HTTPS** in the repo's Settings → Pages
+(GitHub issues the certificate automatically, usually within the hour).
+
+Note: GitHub Pages requires a **public** repository on the free plan. The repo
+is public for this reason; it contains no secrets.
 
 Post-launch checklist:
 
