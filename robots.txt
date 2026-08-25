@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://midnightshift.sg/sitemap.xml
