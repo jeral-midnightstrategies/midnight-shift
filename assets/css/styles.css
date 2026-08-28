@@ -29,7 +29,6 @@
   --amber-soft: #f9edd9;
   --red: #bb5045;
   --red-soft: #f8e6e3;
-  --whatsapp: #1fa855;
 
   /* Type */
   --font-display: "Fraunces", Georgia, "Times New Roman", serif;
@@ -112,8 +111,6 @@ button { font-family: inherit; }
 .btn--secondary:hover { border-color: var(--accent); color: var(--accent-strong); }
 .btn--ghost { background: transparent; color: var(--ink); border-color: transparent; padding-inline: 16px; }
 .btn--ghost:hover { color: var(--accent-strong); }
-.btn--whatsapp { background: #fff; color: var(--whatsapp); border-color: #bfe6cd; }
-.btn--whatsapp:hover { background: #f2fbf5; color: #168843; border-color: var(--whatsapp); }
 .btn--light { background: #fff; color: var(--accent-deep); }
 .btn--light:hover { background: var(--accent-soft); color: var(--accent-deep); }
 .btn--outline-light { background: transparent; color: #fff; border-color: rgba(255, 255, 255, 0.45); }
@@ -206,7 +203,6 @@ button { font-family: inherit; }
 }
 .sticky-cta.is-visible { transform: translateY(0); }
 .sticky-cta .btn--primary { flex: 1; }
-.sticky-cta .btn--whatsapp { flex: 0 0 auto; padding-inline: 16px; }
 @media (min-width: 900px) { .sticky-cta { display: none; } }
 body { padding-bottom: 0; }
 

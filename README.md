@@ -30,16 +30,16 @@ assets/favicon.svg          Favicon
 
 ## Key behaviours
 
-- **Mobile-first** with a sticky bottom CTA bar (Book a Demo + WhatsApp) that
+- **Mobile-first** with a sticky bottom CTA bar (Book a Demo) that
   appears after scrolling past the hero. Hidden on desktop.
 - **Time calculator** on the homepage (`data-calc`) — illustrative only,
   disclaimered; makes no income/appointment claims.
 - **Demo form** (`book-demo.html`) validates client-side, then opens a
-  pre-filled WhatsApp chat to `+65 8089 3527`. Nothing is stored server-side.
+  pre-filled email to `admin@midnightshift.sg`. Nothing is stored server-side.
   To switch to a backend/CRM endpoint later, replace the submit handler in
   `assets/js/main.js` (`data-demo-form` section).
-- **WhatsApp number** lives in `WHATSAPP_NUMBER` in `assets/js/main.js` and in
-  the hard-coded `wa.me` links across pages — change both if the number changes.
+- **Contact email** lives in `DEMO_EMAIL` in `assets/js/main.js` and in the
+  `mailto:` links across pages — change both if the address changes.
 - CRM visuals are hand-built HTML mockups (illustrative UI, no stock photos).
 
 ## Local preview
@@ -88,7 +88,7 @@ Post-launch checklist:
 
 - [ ] Add an `og:image` (1200×630) and reference it in each page's meta tags
 - [ ] Wire the demo form to your CRM/webhook if you want submissions logged
-      in addition to WhatsApp
+      in addition to email
 - [ ] Add analytics (and update `privacy-policy.html` cookie section if so)
 - [ ] Submit `sitemap.xml` in Google Search Console
 

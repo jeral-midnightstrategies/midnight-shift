@@ -2,7 +2,8 @@
 (function () {
   "use strict";
 
-  var WHATSAPP_NUMBER = "6580893527";
+  var DEMO_EMAIL = "admin@midnightshift.sg";
+  var CRLF = String.fromCharCode(13, 10); // mail clients expect CRLF in the body
 
   /* ---------- Mobile nav ---------- */
   var toggle = document.querySelector(".nav-toggle");
@@ -139,8 +140,11 @@
       if (message) lines.push("Notes: " + message);
 
       var url =
-        "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(lines.join("\n"));
-      window.open(url, "_blank", "noopener");
+        "mailto:" + DEMO_EMAIL +
+        "?subject=" + encodeURIComponent("Demo request — " + name) +
+        "&body=" + encodeURIComponent(lines.join(CRLF));
+      // mailto opens more reliably via location than window.open, which can strand a blank tab.
+      window.location.href = url;
 
       var success = form.parentElement.querySelector(".form-success");
       if (success) {
